@@ -1,1 +1,12 @@
-projects
+<div class="row">
+
+  <div class="col-lg-4 col-md-3" *ngFor="let project of projects"
+       [class.selected]="project === selectedProject"
+       (click)="onSelect(project)">
+    <img class="rounded" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+         alt="Generic placeholder image" width="140" height="140">
+    <h2>{{project.name}} {{project.id}}</h2>
+    <p>{{project.text}}</p>
+  </div>
+
+</div>

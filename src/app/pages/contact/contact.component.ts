@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { ContactformComponent} from "../../components/contactform/contactform.component";
 
 @Component ({
   moduleId: module.id,
