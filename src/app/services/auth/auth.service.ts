@@ -14,7 +14,7 @@ export class AuthService {
 
 
   login(): Observable<boolean> {
-    return Observable.of(true).delay(1000).do(val => this.isLoggedIn = true);
+    return Observable.of(true).delay(500).do(val => this.isLoggedIn = true);
   }
 
   logout(): void {

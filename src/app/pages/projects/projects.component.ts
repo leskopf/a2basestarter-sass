@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 import { OnInit } from '@angular/core';
 
-import { Project } from "../../services/projectservice/project"
+import { Project } from "../../services/projectservice/project";
 import { ProjectService } from "../../services/projectservice/project.service";
 
 @Component ({
@@ -13,6 +13,7 @@ import { ProjectService } from "../../services/projectservice/project.service";
 export class ProjectsComponent implements OnInit  {
 
   projects: Project[];
+
   selectedProject: Project;
 
   constructor(private projectService: ProjectService) { }
