@@ -9,6 +9,11 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ContactformComponent } from './components/contactform/contactform.component';
 
 import { ProjectService } from "./services/projectservice/project.service";
+import { AuthService } from "./services/auth/auth.service";
+import { AuthGuard } from "./services/auth-guard/auth-guard.service";
+
+import { AdminComponent } from './pages/admin/admin.component';
+import { AdminHomeComponent } from './pages/admin/adminhome/adminhome.component';
 
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent }   from './pages/about/about.component';
@@ -26,7 +31,9 @@ import { LoginComponent }  from './pages/login/login.component';
     ContactComponent,
     ContactformComponent,
     ProjectsComponent,
-    LoginComponent
+    LoginComponent,
+    AdminComponent,
+    AdminHomeComponent
 
   ],
   imports: [
@@ -34,7 +41,7 @@ import { LoginComponent }  from './pages/login/login.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [ProjectService],
+  providers: [ProjectService,AuthService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
